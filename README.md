@@ -1,2 +1,3 @@
-# Triangulum-Studio-Docs
-The User level documentation, tutorials and sample projects for Triangulum Studio.
+<div align = center>
+    <h1>Triangulum Studio Docs</h1>
+</div>
