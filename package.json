@@ -1,0 +1,23 @@
+{
+  "name": "triangulum-docs",
+  "version": "1.0.0",
+  "description": "Helpful explanations for all of the components and blocks in Triangulum Studio.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "appinventor-docs"
+  ],
+  "author": "Preet Vadaliya",
+  "license": "Apache-2.0",
+  "homepage": "",
+  "dependencies": {
+    "json-to-pretty-yaml": "^1.2.2",
+    "repeat-string": "^1.6.1",
+    "turndown": "^7.0.0"
+  }
+}
