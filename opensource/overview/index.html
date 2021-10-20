@@ -1,0 +1,2814 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Triangulum Studio Documentation">
+      
+      
+      
+        <meta name="author" content="Triangulum Studio">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+    
+    
+      
+        <title>App Inventor Developer Overview - Triangulum Studio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#app-inventor-developer-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Triangulum Studio" class="md-header__button md-logo" aria-label="Triangulum Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Triangulum Studio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              App Inventor Developer Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/AIIE-ADL/Triangulum-Studio-Docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../components/userinterface/button/" class="md-tabs__link">
+        Components
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blocks/control/" class="md-tabs__link">
+        Built-In Blocks
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Triangulum Studio" class="md-nav__button md-logo" aria-label="Triangulum Studio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Triangulum Studio
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/AIIE-ADL/Triangulum-Studio-Docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Components
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Components" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Components
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          User Interface
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="User Interface" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          User Interface
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/button/" class="md-nav__link">
+        Button
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/checkbox/" class="md-nav__link">
+        CheckBox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/datepicker/" class="md-nav__link">
+        DatePicker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/screen/" class="md-nav__link">
+        Screen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/image/" class="md-nav__link">
+        Image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/label/" class="md-nav__link">
+        Label
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/listpicker/" class="md-nav__link">
+        ListPicker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/listview/" class="md-nav__link">
+        ListView
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/notifier/" class="md-nav__link">
+        Notifier
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/passwordtextbox/" class="md-nav__link">
+        PasswordTextBox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/slider/" class="md-nav__link">
+        Slider
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/spinner/" class="md-nav__link">
+        Spinner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/switch/" class="md-nav__link">
+        Switch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/textbox/" class="md-nav__link">
+        TextBox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/timepicker/" class="md-nav__link">
+        TimePicker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/userinterface/webviewer/" class="md-nav__link">
+        WebViewer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Layout
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Layout" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Layout
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/layout/horizontalarrangement/" class="md-nav__link">
+        HorizontalArrangement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/layout/horizontalscrollarrangement/" class="md-nav__link">
+        HorizontalScrollArrangement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/layout/tablearrangement/" class="md-nav__link">
+        TableArrangement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/layout/verticalarrangement/" class="md-nav__link">
+        VerticalArrangement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/layout/verticalscrollarrangement/" class="md-nav__link">
+        VerticalScrollArrangement
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Media
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Media" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Media
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/camcorder/" class="md-nav__link">
+        Camcorder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/camera/" class="md-nav__link">
+        Camera
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/imagepicker/" class="md-nav__link">
+        ImagePicker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/player/" class="md-nav__link">
+        Player
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/sound/" class="md-nav__link">
+        Sound
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/soundrecorder/" class="md-nav__link">
+        SoundRecorder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/speechrecognizer/" class="md-nav__link">
+        SpeechRecognizer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/texttospeech/" class="md-nav__link">
+        TextToSpeech
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/videoplayer/" class="md-nav__link">
+        VideoPlayer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/media/yandextranslate/" class="md-nav__link">
+        YandexTranslate
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          Drawing and Animation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Drawing and Animation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Drawing and Animation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/animation/ball/" class="md-nav__link">
+        Ball
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/animation/canvas/" class="md-nav__link">
+        Canvas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/animation/imagesprite/" class="md-nav__link">
+        ImageSprite
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Maps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Maps" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Maps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/maps/circle/" class="md-nav__link">
+        Circle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/maps/featurecollection/" class="md-nav__link">
+        FeatureCollection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/maps/linestring/" class="md-nav__link">
+        LineString
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/maps/map/" class="md-nav__link">
+        Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/maps/marker/" class="md-nav__link">
+        Marker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/maps/navigation/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/maps/polygon/" class="md-nav__link">
+        Polygon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/maps/rectangle/" class="md-nav__link">
+        Rectangle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          Sensors
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sensors" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Sensors
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/accelerometersensor/" class="md-nav__link">
+        AccelerometerSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/barcodescanner/" class="md-nav__link">
+        BarcodeScanner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/barometer/" class="md-nav__link">
+        Barometer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/clock/" class="md-nav__link">
+        Clock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/gyroscopesensor/" class="md-nav__link">
+        GyroscopeSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/hygrometer/" class="md-nav__link">
+        Hygrometer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/lightsensor/" class="md-nav__link">
+        LightSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/locationsensor/" class="md-nav__link">
+        LocationSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/magneticfieldsensor/" class="md-nav__link">
+        MagneticFieldSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/nearfield/" class="md-nav__link">
+        NearField
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/orientationsensor/" class="md-nav__link">
+        OrientationSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/pedometer/" class="md-nav__link">
+        Pedometer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/proximitysensor/" class="md-nav__link">
+        ProximitySensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/sensors/thermometer/" class="md-nav__link">
+        Thermometer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_7">
+          Social
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Social" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
+          Social
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/social/contactpicker/" class="md-nav__link">
+        ContactPicker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/social/emailpicker/" class="md-nav__link">
+        EmailPicker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/social/phonecall/" class="md-nav__link">
+        PhoneCall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/social/phonenumberpicker/" class="md-nav__link">
+        PhoneNumberPicker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/social/sharing/" class="md-nav__link">
+        Sharing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/social/texting/" class="md-nav__link">
+        Texting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/social/twitter/" class="md-nav__link">
+        Twitter
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_8">
+          Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Storage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/storage/clouddb/" class="md-nav__link">
+        CloudDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/storage/file/" class="md-nav__link">
+        File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/storage/tinydb/" class="md-nav__link">
+        TinyDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/storage/tinywebdb/" class="md-nav__link">
+        TinyWebDB
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_9">
+          Connectivity
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Connectivity" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Connectivity
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/connectivity/activitystarter/" class="md-nav__link">
+        ActivityStarter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/connectivity/bluetoothclient/" class="md-nav__link">
+        BluetoothClient
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/connectivity/bluetoothserver/" class="md-nav__link">
+        BluetoothServer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/connectivity/serial/" class="md-nav__link">
+        Serial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/connectivity/web/" class="md-nav__link">
+        Web
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_10" type="checkbox" id="__nav_2_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_10">
+          LEGO® MINDSTORMS®
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="LEGO® MINDSTORMS®" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_10">
+          <span class="md-nav__icon md-icon"></span>
+          LEGO® MINDSTORMS®
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/ev3colorsensor/" class="md-nav__link">
+        Ev3ColorSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/ev3commands/" class="md-nav__link">
+        Ev3Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/ev3gyrosensor/" class="md-nav__link">
+        Ev3GyroSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/ev3motors/" class="md-nav__link">
+        Ev3Motors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/ev3sound/" class="md-nav__link">
+        Ev3Sound
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/ev3touchsensor/" class="md-nav__link">
+        Ev3TouchSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/ev3ui/" class="md-nav__link">
+        Ev3UI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/ev3ultrasonicsensor/" class="md-nav__link">
+        Ev3UltrasonicSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/nxtcolorsensor/" class="md-nav__link">
+        NxtColorSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/nxtdirectcommands/" class="md-nav__link">
+        NxtDirectCommands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/nxtdrive/" class="md-nav__link">
+        NxtDrive
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/nxtlightsensor/" class="md-nav__link">
+        NxtLightSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/nxtsoundsensor/" class="md-nav__link">
+        NxtSoundSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/nxttouchsensor/" class="md-nav__link">
+        NxtTouchSensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/legomindstorms/nxtultrasonicsensor/" class="md-nav__link">
+        NxtUltrasonicSensor
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_11" type="checkbox" id="__nav_2_11" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_11">
+          Experimental
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Experimental" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_11">
+          <span class="md-nav__icon md-icon"></span>
+          Experimental
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/experimental/firebasedb/" class="md-nav__link">
+        FirebaseDB
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Built-In Blocks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Built-In Blocks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Built-In Blocks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocks/control/" class="md-nav__link">
+        Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocks/logic/" class="md-nav__link">
+        Logic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocks/math/" class="md-nav__link">
+        Math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocks/text/" class="md-nav__link">
+        Text
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocks/lists/" class="md-nav__link">
+        Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocks/dictionaries/" class="md-nav__link">
+        Dictionaries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocks/colors/" class="md-nav__link">
+        Colors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocks/variables/" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocks/procedures/" class="md-nav__link">
+        Procedures
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-web-toolkit-gwt" class="md-nav__link">
+    Google Web Toolkit (GWT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-app-engine" class="md-nav__link">
+    Google App Engine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-kawa" class="md-nav__link">
+    Schema &amp; Kawa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blockly" class="md-nav__link">
+    Blockly
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-directories" class="md-nav__link">
+    Project &amp; Directories
+  </a>
+  
+    <nav class="md-nav" aria-label="Project &amp; Directories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aiphoneapp" class="md-nav__link">
+    aiphoneapp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aiplayapp" class="md-nav__link">
+    aiplayapp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appengine" class="md-nav__link">
+    appengine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocklyeditor" class="md-nav__link">
+    blocklyeditor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buildserver" class="md-nav__link">
+    buildserver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common" class="md-nav__link">
+    common
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#components" class="md-nav__link">
+    components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docs" class="md-nav__link">
+    docs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lib" class="md-nav__link">
+    lib
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#app-inventor-classic" class="md-nav__link">
+    App Inventor Classic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-information" class="md-nav__link">
+    Component Information
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple_componentsjson" class="md-nav__link">
+    simple_components.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple_componentstxt" class="md-nav__link">
+    simple_components.txt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple_components_permissionsjson" class="md-nav__link">
+    simple_components_permissions.json
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ya_lang_defxml" class="md-nav__link">
+    ya_lang_def.xml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-dochtml" class="md-nav__link">
+    component-doc.html
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-libraries" class="md-nav__link">
+    External Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-style" class="md-nav__link">
+    Programming Style
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-branches" class="md-nav__link">
+    Git Branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-and-gerrit-reviews" class="md-nav__link">
+    GitHub and Gerrit Reviews
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/AIIE-ADL/Triangulum-Studio-Docs/edit/gh-pages/docs/opensource/overview.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="app-inventor-developer-overview">App Inventor Developer Overview<a class="headerlink" href="#app-inventor-developer-overview" title="Permanent link">⚓︎</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M17.263 2.177a1.75 1.75 0 0 1 2.474 0l2.586 2.586a1.75 1.75 0 0 1 0 2.474L19.53 10.03l-.012.013L8.69 20.378a1.75 1.75 0 0 1-.699.409l-5.523 1.68a.75.75 0 0 1-.935-.935l1.673-5.5a1.75 1.75 0 0 1 .466-.756L14.476 4.963l2.787-2.786zm-2.275 4.371-10.28 9.813a.25.25 0 0 0-.067.108l-1.264 4.154 4.177-1.271a.25.25 0 0 0 .1-.059l10.273-9.806-2.94-2.939zM19 8.44l2.263-2.262a.25.25 0 0 0 0-.354l-2.586-2.586a.25.25 0 0 0-.354 0L16.061 5.5 19 8.44z"/></svg></span>&nbsp;&nbsp;&nbsp;&nbsp;Ellen Spertus (spertus@google.com) <br />
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M17.263 2.177a1.75 1.75 0 0 1 2.474 0l2.586 2.586a1.75 1.75 0 0 1 0 2.474L19.53 10.03l-.012.013L8.69 20.378a1.75 1.75 0 0 1-.699.409l-5.523 1.68a.75.75 0 0 1-.935-.935l1.673-5.5a1.75 1.75 0 0 1 .466-.756L14.476 4.963l2.787-2.786zm-2.275 4.371-10.28 9.813a.25.25 0 0 0-.067.108l-1.264 4.154 4.177-1.271a.25.25 0 0 0 .1-.059l10.273-9.806-2.94-2.939zM19 8.44l2.263-2.262a.25.25 0 0 0 0-.354l-2.586-2.586a.25.25 0 0 0-.354 0L16.061 5.5 19 8.44z"/></svg></span>&nbsp;&nbsp;&nbsp;&nbsp;José Dominguez (josmasflores@gmail.com)</p>
+<hr />
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
+<p>This document provides a high-level overview of the App Inventor source code, including the toolkit and libraries on which App Inventor depends, the different sub-projects within App Inventor, and information flow during the build process and execution.</p>
+<p>There are differences between App Inventor and App Inventor 2, and these will be highlighted when appropriate.</p>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">⚓︎</a></h2>
+<p>MIT App Inventor is a rather large system divided in multiple projects, each of which relies on different open source technologies. Before showing what each of those projects are (section 3), we introduce some of the technologies used within them.</p>
+<h3 id="google-web-toolkit-gwt">Google Web Toolkit (GWT)<a class="headerlink" href="#google-web-toolkit-gwt" title="Permanent link">⚓︎</a></h3>
+<p><a href="https://www.google.com/url?q=https://developers.google.com/web-toolkit/overview&amp;sa=D&amp;source=editors&amp;ust=1618564498693000&amp;usg=AOvVaw1l2wFGss8Srl0CYLlIfxJD">Google Web Toolkit (GWT)</a> allows programmers to write client-server applications in Java without worrying about the details of remote procedure calls (RPCs) except for providing explicit callbacks for RPCs (one for a successful call, one for failure).GWT compiles the client code into JavaScript, which runs within a web browser, and the RPCs run as Java code on the server, with communication done via HTTP.The reader is advised to learn about GWT before delving into the portion of App Inventor that runs in, or responds to requests from, the user’s browser.</p>
+<h3 id="google-app-engine">Google App Engine<a class="headerlink" href="#google-app-engine" title="Permanent link">⚓︎</a></h3>
+<p><a href="https://cloud.google.com/appengine/">Google App Engine (GAE)</a> is a cloud-computing platform that enables programs written in Java (or Python) to run and maintain data on Google servers.The original internal version of App Inventor was built directly on proprietary Google infrastructure but, for the open source release, was rewritten to use GAE, using the third-party Objectify datastore API.
+GWT and GAE play well together, where a GWT server can run on a GAE server. This is how App Inventor works, as shown in Figure 1.</p>
+<p><br></p>
+<figure>
+<img src="/assets/fig-1.png"/>
+<figcaption>Figure 1</figcaption>
+</figure>
+
+<div class="admonition info">
+<p class="admonition-title">Figure 1</p>
+<p>The App Inventor client and server are created with GWT, which converts the front-end code into JavaScript, which is run with the GWT client library in the user’s browser.The back-end runs on the GWT server library as a Google App Engine service, using the third-party Objectify API for data storage</p>
+</div>
+<h3 id="android">Android<a class="headerlink" href="#android" title="Permanent link">⚓︎</a></h3>
+<p>If you’ve never written an Android application before and if you’re going to work on components, the <a href="https://developer.android.com/training/basics/firstapp">Hello World tutorial</a> is a good way to get started. If you are serious about writing components, you should also complete the Managing the Activity lifecycle section.</p>
+<h3 id="schema-kawa">Schema &amp; Kawa<a class="headerlink" href="#schema-kawa" title="Permanent link">⚓︎</a></h3>
+<p><a href="https://www.google.com/url?q=http://www.gnu.org/software/kawa/&amp;sa=D&amp;source=editors&amp;ust=1618564498696000&amp;usg=AOvVaw03DfQmC_TXD1UWkWavBZDx">Kawa</a> is a free implementation of Scheme that compiles to Java byte code, which can be converted by the tool dx into <a href="https://www.google.com/url?q=http://en.wikipedia.org/wiki/Dalvik_(software)&amp;sa=D&amp;source=editors&amp;ust=1618564498696000&amp;usg=AOvVaw3IjHit9HZ5W7OTWFc-lqpa">Dalvik byte code</a>.We use <a href="https://en.wikipedia.org/wiki/Scheme_(programming_language)">Scheme</a> as the internal representation of users’ programs, and part of the <a href="https://github.com/mit-cml/appinventor-sources/tree/master/appinventor/buildserver/src/com/google/appinventor/buildserver/resources/runtime.scm">runtime library</a> is written in Scheme.These get compiled down to byte code and linked with our components library (written in Java) and external libraries (written in Java and C/C++) by the build server.</p>
+<h3 id="blockly">Blockly<a class="headerlink" href="#blockly" title="Permanent link">⚓︎</a></h3>
+<p>In App Inventor 2, the blocks editor has been integrated into the browser, as opposed to the <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/javaws/">Java Web Start</a> application that ships with App Inventor. <a href="https://developers.google.com/blockly">Blockly</a> is an open source library created by Googler Neil Fraser, and it’s written in JavaScript (using SVG).</p>
+<p><br></p>
+<h2 id="project-directories">Project &amp; Directories<a class="headerlink" href="#project-directories" title="Permanent link">⚓︎</a></h2>
+<p>The App Inventor distribution consists of the following subdirectories, the first seven of which contain source code for sub-projects:</p>
+<h3 id="aiphoneapp">aiphoneapp<a class="headerlink" href="#aiphoneapp" title="Permanent link">⚓︎</a></h3>
+<p>The interpreter that runs on the mobile device or emulator when it is connected to a computer running App Inventor.</p>
+<h3 id="aiplayapp"><a href="https://github.com/mit-cml/appinventor-sources/tree/master/appinventor/aiplayapp">aiplayapp</a><a class="headerlink" href="#aiplayapp" title="Permanent link">⚓︎</a></h3>
+<p>Another version of the interpreter that runs on the mobile device or emulator when it is connected to a computer running App Inventor. This is what we call the MIT App Inventor Companion.</p>
+<h3 id="appengine"><a href="https://github.com/mit-cml/appinventor-sources/tree/master/appinventor/appengine">appengine</a><a class="headerlink" href="#appengine" title="Permanent link">⚓︎</a></h3>
+<p>The GWT application that provides the Designer JavaScript code to the client browser and provides supporting server-side functionality, such as storing and retrieving projects and issuing compile requests to the buildserver.</p>
+<h3 id="blocklyeditor"><a href="https://github.com/mit-cml/appinventor-sources/tree/master/appinventor/blocklyeditor">blocklyeditor</a><a class="headerlink" href="#blocklyeditor" title="Permanent link">⚓︎</a></h3>
+<p>The Blocks Editor, embedded in the browser and powered by Blockly. Used by both blockseditor and buildserver.</p>
+<h3 id="buildserver"><a href="https://github.com/mit-cml/appinventor-sources/tree/master/appinventor/buildserver">buildserver</a><a class="headerlink" href="#buildserver" title="Permanent link">⚓︎</a></h3>
+<p>An http server/servlet that takes a source zip file as input and produces an apk and/or error messages.</p>
+<h3 id="common"><a href="https://github.com/mit-cml/appinventor-sources/tree/master/appinventor/common">common</a><a class="headerlink" href="#common" title="Permanent link">⚓︎</a></h3>
+<p>Constants and utility classes used by other sub-projects.</p>
+<h3 id="components"><a href="https://github.com/mit-cml/appinventor-sources/tree/master/appinventor/components">components</a><a class="headerlink" href="#components" title="Permanent link">⚓︎</a></h3>
+<p>Code supporting App Inventor components, including annotations, implementations, and scripts for extracting component information needed by other sub-projects.More information can be found in the documents:
+- How to Add A Component
+- How to Add a Property to a Component</p>
+<h3 id="docs"><a href="https://github.com/mit-cml/appinventor-sources/tree/master/appinventor/docs">docs</a><a class="headerlink" href="#docs" title="Permanent link">⚓︎</a></h3>
+<p>User-level documentation, such as tutorials.</p>
+<h3 id="lib"><a href="https://github.com/mit-cml/appinventor-sources/tree/master/appinventor/lib">lib</a><a class="headerlink" href="#lib" title="Permanent link">⚓︎</a></h3>
+<p>External libraries, such as JUnit, used by the various sub-projects.They are listed below in External Libraries.</p>
+<p><br></p>
+<h2 id="app-inventor-classic">App Inventor Classic<a class="headerlink" href="#app-inventor-classic" title="Permanent link">⚓︎</a></h2>
+<p><br></p>
+<h2 id="component-information">Component Information<a class="headerlink" href="#component-information" title="Permanent link">⚓︎</a></h2>
+<h3 id="simple_componentsjson">simple_components.json<a class="headerlink" href="#simple_componentsjson" title="Permanent link">⚓︎</a></h3>
+<p>This file is used by the editor within the Designer in the GWT client (part of the appengine project).Here are the keys, their meanings, and sample values for the AccelerometerSensor.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Key</th>
+<th align="center">Meaning</th>
+<th align="center">Sample value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">name</td>
+<td align="center">the component’s name</td>
+<td align="center">AccelerometerSensor</td>
+</tr>
+<tr>
+<td align="center">version</td>
+<td align="center">a number incremented whenever the component’s API is changed (such as by adding a new Property)</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">categoryString</td>
+<td align="center">the section on the palette in which it should appear</td>
+<td align="center">SENSORS</td>
+</tr>
+<tr>
+<td align="center">helpString</td>
+<td align="center">descriptive HTML text shown when the user clicks the help icon to the right of the component’s name</td>
+<td align="center">Non-visible component that can detect shaking and measure acceleration...</td>
+</tr>
+<tr>
+<td align="center">showOnPalette</td>
+<td align="center">whether to show the component on the palette (currently true for all components except for Form, which is automatically created)</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">nonVisible</td>
+<td align="center">false for GUI elements, true for non-GUI elements, such as sensors</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">iconName</td>
+<td align="center">a path to the component’s icon, relative to <code>appinventor/appengine/src/com/google/appinventor</code></td>
+<td align="center">images/accelerometersensor.png</td>
+</tr>
+<tr>
+<td align="center">properties</td>
+<td align="center">a list containing the name, type, and default value of each property</td>
+<td align="center">[{ “name”: “Enabled”,   “editorType”: “boolean”,   “defaultValue”: “True”}]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="simple_componentstxt">simple_components.txt<a class="headerlink" href="#simple_componentstxt" title="Permanent link">⚓︎</a></h3>
+<p>This file, which simply lists component names alphabetically, one per line, is used by the buildserver when building user projects.</p>
+<h3 id="simple_components_permissionsjson">simple_components_permissions.json<a class="headerlink" href="#simple_components_permissionsjson" title="Permanent link">⚓︎</a></h3>
+<p>This file, which is used by the buildserver to generate the permissions required by an app, has entries with the names and required permissions of each component,
+such as:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Clock&quot;</span><span class="p">,</span> <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[]},</span>
+<span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ContactPicker&quot;</span><span class="p">,</span>
+ <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;android.permission.INTERNET&quot;</span><span class="p">,</span>
+<span class="s2">&quot;android.permission.READ_CONTACTS&quot;</span><span class="p">]}</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="ya_lang_defxml">ya_lang_def.xml<a class="headerlink" href="#ya_lang_defxml" title="Permanent link">⚓︎</a></h3>
+<p>This file contains the specification of the blocks used by blockseditor (via blockslib), including both static library functions and components with their methods, properties, and events.Its header and footer come from the static filesOUTPUT_HEADER.txt and OUTPUT_FOOTER.txt in the src/com/google/appinventor/components/scripts/templates directory within the components project.At the time of this writing, ya_lang_def was over 14,000 lines.
+Here is a small excerpt:
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="c">&lt;!-- TinyWebDB Component --&gt;</span>
+<span class="nt">&lt;BlockGenus</span> <span class="na">name=</span><span class="s">&quot;TinyWebDB&quot;</span> <span class="na">initlabel=</span><span class="s">&quot;TinyWebDB&quot;</span> <span class="na">label-unique=</span><span class="s">&quot;yes&quot;</span> <span class="na">editable-label=</span><span class="s">&quot;no&quot;</span> <span class="na">kind=</span><span class="s">&quot;command&quot;</span> <span class="na">is-starter=</span><span class="s">&quot;yes&quot;</span> <span class="na">is-terminator=</span><span class="s">&quot;yes&quot;</span> <span class="na">color=</span><span class="s">&quot;grey&quot;</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;description&gt;</span>
+<span class="nt">&lt;text&gt;</span>Non-visible component that communicates with a Web service to store and retrieve information.<span class="nt">&lt;/text&gt;</span>
+ <span class="nt">&lt;/description&gt;</span>
+ <span class="nt">&lt;LangSpecProperties&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;ya-kind&quot;</span> <span class="na">value=</span><span class="s">&quot;component&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;component-version&quot;</span> <span class="na">value=</span><span class="s">&quot;2&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;ya-event-1&quot;</span> <span class="na">value=</span><span class="s">&quot;TinyWebDB-GotValue&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;ya-event-2&quot;</span> <span class="na">value=</span><span class="s">&quot;TinyWebDB-ValueStored&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;ya-event-3&quot;</span> <span class="na">value=</span><span class="s">&quot;TinyWebDB-WebServiceError&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;ya-prop-1&quot;</span> <span class="na">value=</span><span class="s">&quot;ServiceURL/read-write-property/text/&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;ya-method-1&quot;</span> <span class="na">value=</span><span class="s">&quot;TinyWebDB-GetValue&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;ya-type-method-1&quot;</span> <span class="na">value=</span><span class="s">&quot;Type-TinyWebDB-GetValue&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;ya-method-2&quot;</span> <span class="na">value=</span><span class="s">&quot;TinyWebDB-StoreValue&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;LangSpecProperty</span> <span class="na">key=</span><span class="s">&quot;ya-type-method-2&quot;</span> <span class="na">value=</span><span class="s">&quot;Type-TinyWebDB-StoreValue&quot;</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;/LangSpecProperties&gt;</span>
+<span class="nt">&lt;/BlockGenus&gt;</span>
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="component-dochtml">component-doc.html<a class="headerlink" href="#component-dochtml" title="Permanent link">⚓︎</a></h3>
+<p>This file, generated by the Ant target ComponentDocumentation (which does not appear as a dependency of any other target or task) contains reference documentation in HTML.Descriptions are pulled from annotations or comments in the source code for components.
+Here is an excerpt:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">HTML Code</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;TinyDB&quot;</span><span class="p">&gt;</span>TinyDB<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Non-visible component that persistently stores values on the phone.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Properties<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+none
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Events<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+none
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Methods<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>any GetValue(text tag)<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>Retrieve the value stored under the given tag.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>StoreValue(text tag, any valueToStore)<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>Store the given value under the given tag.The storage persists on the phone when the app is restarted.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Preview</label><div class="tabbed-content">
+<p><h2 id="TinyDB">TinyDB</h2>
+<p>Non-visible component that persistently stores values on the phone.</p>
+<h3>Properties</h3>
+none
+<h3>Events</h3>
+none
+<h3>Methods</h3>
+<dl>
+<dt><code>any GetValue(text tag)</code></dt>
+<dd>Retrieve the value stored under the given tag.</dd>
+<dt><code>StoreValue(text tag, any valueToStore)</code></dt>
+<dd>Store the given value under the given tag.The storage persists on the phone when the app is restarted.</dd>
+</dl></p>
+</div>
+</div>
+<p><br></p>
+<h2 id="external-libraries">External Libraries<a class="headerlink" href="#external-libraries" title="Permanent link">⚓︎</a></h2>
+<p>A number of external libraries are included in the distribution under the subdirectory <code>appinventor/lib</code>.Listed by directory,
+the are:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Library Name</th>
+<th align="left">Descriptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">android</td>
+<td align="left">the <a href="https://developer.android.com/studio">Android SDK</a>, used within the components project to generate:</td>
+</tr>
+<tr>
+<td align="center">animal_sniffer</td>
+<td align="left"><a href="https://www.mojohaus.org/animal-sniffer/">Animal Sniffer</a>, used within the blockseditor project’s BlocksEditorTest to ensure that the Blocks Editor does not contain references to any methods added to the Java standard libraries after Java 5 (1.5).  (In the past, we had problems with String.isEmpty() sneaking in.) Note that this is for App Inventor classic only.</td>
+</tr>
+<tr>
+<td align="center">ant-contrib</td>
+<td align="left"><a href="http://ant-contrib.sourceforge.net/">Ant-Contrib</a>, which defines the <a href="http://ant-contrib.sourceforge.net/tasks/tasks/propertyregex.html">propertyregex</a> task used within the macro ai.dojunit in build-common.xml.</td>
+</tr>
+<tr>
+<td align="center">appengine</td>
+<td align="left">the <a href="https://cloud.google.com/appengine/downloads?csw=1">App Engine Java SDK</a> required by the appengine project.</td>
+</tr>
+<tr>
+<td align="center">args4j</td>
+<td align="left"><a href="https://args4j.kohsuke.org/">Args4j</a>, a parser for command-line options used for the standalone version of the compiler (which is used to generate StarterApp) within the buildserver project.</td>
+</tr>
+<tr>
+<td align="center">blockly</td>
+<td align="left">this is the source code for the <a href="https://developers.google.com/blockly">Blockly</a> library in which the blocks editor in App Inventor 2 is based.</td>
+</tr>
+<tr>
+<td align="center">commons-fileupload</td>
+<td align="left">part of the <a href="http://commons.apache.org/">Apache Commons</a>, providing the ability to upload projects and individual asset files to the UploadServlet within the appengine project.</td>
+</tr>
+<tr>
+<td align="center">commons-io</td>
+<td align="left">part of the <a href="http://commons.apache.org/">Apache Commons</a>, providing the FileUtils class, which is used in BlockSaveFileTest.java in the blockslib project.</td>
+</tr>
+<tr>
+<td align="center">findbugs</td>
+<td align="left"><a href="http://findbugs.sourceforge.net/">FindBugs</a>, which is only included for its definition of javax.annotation.Nullable, which is <a href="https://github.com/google/guava/issues/776">required by the Guava GWT library</a>.</td>
+</tr>
+<tr>
+<td align="center">gson</td>
+<td align="left"><a href="https://github.com/google/gson">Gson</a>, a Java library to convert between JSON and Java objects, required by keyczar (below).</td>
+</tr>
+<tr>
+<td align="center">guava</td>
+<td align="left"><a href="https://github.com/google/guava">Guava</a>, a public version of some of the internal Google libraries on which the original version of App Inventor was written.</td>
+</tr>
+<tr>
+<td align="center">gwt</td>
+<td align="left"><a href="http://www.gwtproject.org/">Google Web Toolkit</a>, used by appengine to create the browser client.</td>
+</tr>
+<tr>
+<td align="center">gwt_dragdrop</td>
+<td align="left"><a href="https://github.com/fredsa/gwt-dnd">gwt-dnd</a>, a drag-and-drop library for GWT.  This is used by appengine as part of the browser client.</td>
+</tr>
+<tr>
+<td align="center">gwt_incubator</td>
+<td align="left">the deprecated <a href="https://code.google.com/archive/p/google-web-toolkit-incubator/">Google Web Toolkit Incubator</a>.  The appengine project uses GWTCanvas andColor in the mock component implementation.</td>
+</tr>
+<tr>
+<td align="center">jdk5</td>
+<td align="left">this includes the API signature file (not library) jdk5.sig to be used by animal_sniffer (above) to ensure that the Blocks Editor does not contain references to any methods added to the Java standard libraries after Java 5 (1.5).   This was generated by a commented-out target, BuildJdk5Signature, in the build.xml file for blockseditor.</td>
+</tr>
+<tr>
+<td align="center">json</td>
+<td align="left">the reference Java library to parse <a href="https://www.json.org/json-en.html">JSON</a>.  JSON is used throughout the system:</td>
+</tr>
+<tr>
+<td align="center">junit</td>
+<td align="left">the standard <a href="https://junit.org/">Java unit testing</a> library (JUnit), used for tests throughout the system.</td>
+</tr>
+<tr>
+<td align="center">junit4</td>
+<td align="left"><a href="https://junit.org/">test libraries for Java</a>, used on top of JUnit.</td>
+</tr>
+<tr>
+<td align="center">junit-addons</td>
+<td align="left"><a href="http://junit-addons.sourceforge.net/">JUnit addons</a>, specifically the classes <a href="http://junit-addons.sourceforge.net/junitx/framework/Assert.html">junitx.framework.Assert</a> and <a href="http://junit-addons.sourceforge.net/junitx/framework/ListAssert.html">junitx.framework.ListAssert</a>.</td>
+</tr>
+<tr>
+<td align="center">kawa</td>
+<td align="left">the <a href="http://www.gnu.org/software/kawa/">Kawa language framework</a>, whose included compiler is used to convert YAIL/Scheme code to Java byte code.</td>
+</tr>
+<tr>
+<td align="center">keyczar</td>
+<td align="left">the <a href="https://github.com/google/keyczar">Keyczar cryptographic library</a> used for generating keys for signing Android apps.</td>
+</tr>
+<tr>
+<td align="center">log4j</td>
+<td align="left">the <a href="https://logging.apache.org/log4j/2.x/">log4j logging library</a> required by keyczar.</td>
+</tr>
+<tr>
+<td align="center">objectify-3.0</td>
+<td align="left">the <a href="https://code.google.com/archive/p/objectify-appengine/">objectify-appengine library</a>, which provides a simpler interface to the Google App Engine datastore.</td>
+</tr>
+<tr>
+<td align="center">powermock</td>
+<td align="left">the <a href="https://powermock.github.io/">PowerMock testing framework</a>, which enables mocking Android classes with final methods.</td>
+</tr>
+<tr>
+<td align="center">responder-iq</td>
+<td align="left">classes supporting testing from the <a href="https://code.google.com/archive/p/responder-iq/">responder-iq</a> library.  Specifically, we use the classes com.riq.MockHttpServletRequest and com.riq.MockHttpServletResponse in DownloadServletTest.java.</td>
+</tr>
+<tr>
+<td align="center">tablelayout</td>
+<td align="left">TableLayout used in blockslib for layout within the Blocks Editor, not to be confused with the Android TableLayout class.</td>
+</tr>
+<tr>
+<td align="center">twitter</td>
+<td align="left"><a href="http://twitter4j.org/en/index.html">Twitter4j</a>, an unofficial Java library for the Twitter API, used by the Twitter component.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h2 id="programming-style">Programming Style<a class="headerlink" href="#programming-style" title="Permanent link">⚓︎</a></h2>
+<p>We generally follow these style guides:</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> <a href="https://source.android.com/setup/contribute/code-style">Android Code Style Rules</a></li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> <a href="https://www.oracle.com/java/technologies/cc-java-programming-language.html">Sun/Oracle Code Conventions</a></li>
+<li class="task-list-item"><input type="checkbox" disabled checked/> <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">Javadoc</a></li>
+</ul>
+<p>An exception is that we use upper-camel-case (e.g., <strong>MoveTo</strong>) for component property, method, and event names.</p>
+<p><br></p>
+<h2 id="git-branches">Git Branches<a class="headerlink" href="#git-branches" title="Permanent link">⚓︎</a></h2>
+<p>The official App Inventor sources reside on GitHub in <a href="https://github.com/mit-cml/appinventor-sources">mit-cml/appinventor-sources</a> The primary branches are:</p>
+<ol>
+<li><a href="https://github.com/mit-cml/appinventor-sources/tree/master">master</a> -- The current sources for MIT App Inventor 2</li>
+<li><a href="https://github.com/mit-cml/appinventor-sources/tree/ai1">ai1</a> -- The last version of MIT App Inventor Classic</li>
+<li><a href="https://github.com/mit-cml/appinventor-sources/tree/gh-pages">gh-pages</a> -- This website (GitHub convention for pages)</li>
+<li><a href="https://github.com/mit-cml/appinventor-sources/tree/ucr">ucr</a> -- Upcoming Component Release</li>
+</ol>
+<p>Periodically there will be other branches for a specified purpose, usually branches representing longer term development, often separately reviewed. Currently there is an “api4” branch where we are working on changes to support a minSdk of 4 (or greater).</p>
+<p>There are two types of releases that we make on our public service. The more significant release we refer to as a “Component Release.” A Component release includes changes to components such that App Inventor programmers will need to update their version of the App Inventor Companion and we also need to update the buildservers (which package apps for people) to be able to use the new/modified component(s). Because projects are marked with the version of the components they were built with, once we perform a component release WE CANNOT GO BACK!!! It is also worth noting that Component releases require work on the part of App Inventor Programmers because they have to update the AI2 Companion on their devices and or within their copy of the Android Emulator. Because of the effort and testing required, we tend to avoid having too many component releases too close together. In general we have been doing a Component Release once per month.</p>
+<p>By comparison “non component releases” are where we do not update components. For example changes to the App Inventor blocks layer, or other features of the Website itself. They can usually be backed out if there is a problem and they do require action on the part of App Inventor programmers.</p>
+<p>Because we do not wish to do component releases too often, we do not always want to checking changes to the master branch which contain component changes. Instead we have a new branch named “ucr” where we will be merging component changes that pass review. When it comes time to do a Component Release, we will merge the ucr branch into the master branch prior to the release.</p>
+<p><br></p>
+<h2 id="github-and-gerrit-reviews">GitHub and Gerrit Reviews<a class="headerlink" href="#github-and-gerrit-reviews" title="Permanent link">⚓︎</a></h2>
+<p>Changes to MIT App Inventor should be made via the <a href="">GitHub Workflow</a>. In general we will not use GitHub to merge in changes. Instead after reviewing a change the release coordinators will squash your commits down to a single commit which will either be rebase on the master branch (non component change) or onto the ucr branch (component changes). Often as part of this work we will submit your commit to our private “Gerrit” review server which will arrange for automated running of our unit tests via the “Jenkins” continuous integration system. In general you do not need to be aware of this level of detail. Sometimes internal changes bypass the GitHub workflow and are reviewed directly on Gerrit, though this is happening less often now. </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 AIIE Application Development Lab
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/AIIAhmedabad" target="_blank" rel="noopener" title="AIIE Ahmedabad" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/AIIE-ADL" target="_blank" rel="noopener" title="AIIE Application Development Lab on GitHub" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="http://www.aii.ac.in/aiie/" target="_blank" rel="noopener" title="AIIE Ahmedabad" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      
+        <script src="../../assets/javascripts/blockly/messages.js"></script>
+      
+        <script src="../../assets/javascripts/blockly/blockly-all.js"></script>
+      
+        <script src="../../assets/javascripts/blockly/blockParamsInfo.js"></script>
+      
+        <script src="../../assets/javascripts/blockly/componentBlocks.js"></script>
+      
+        <script src="../../assets/javascripts/blockly/xmlBlocks.js"></script>
+      
+        <script src="../../assets/javascripts/index.js"></script>
+      
+    
+  </body>
+</html>
